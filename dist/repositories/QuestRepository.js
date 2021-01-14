@@ -33,5 +33,5 @@ var QuestRepository = /** @class */ (function () {
     };
     return QuestRepository;
 }());
-exports.questRepository = Object.freeze(new QuestRepository);
+exports.questRepository = Object.freeze(new QuestRepository());
 //# sourceMappingURL=QuestRepository.js.map

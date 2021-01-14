@@ -1,11 +1,9 @@
-import {questController} from './controllers/QuestController'
+import {questionController} from './controllers/QuestionController'
 
 export const setRouting = (server: any) => {
-    server.get('/question', questController.findAll)
-    server.post('/question', questController.create)
-    server.get('/question/:id', questController.findById)
-    server.delete('/question/search/:id', questController.deleteById)
-    server.post('/question/update/:id', questController.updateById)
-
-
+    server.get('/question', questionController.findAll)
+    server.post('/question', questionController.create)
+    server.get('/question/:id', questionController.findById)
+    server.delete('/question/:id', questionController.deleteById)
+    server.put('/question/:id', questionController.updateById)
 }

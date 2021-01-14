@@ -1,6 +1,5 @@
 import express from 'express'
 import mongoose from 'mongoose';
-import { questController} from './controllers/QuestController';
 import { setRouting } from './routing';
 import  bodyParser  from 'body-parser';
 import fs from 'fs';
@@ -37,7 +36,16 @@ function timeConverter(UNIX_timestamp: any){
     return time;
   }
 
-server.all("/", (req, res, next) => {
+// server.all("/", (req, res, next) => {
+//     console.log('requête: '+req.method);
+//     const {url, method} = req;
+//     const timeReq = timeConverter(Date.now());
+//     const chemin = join(__dirname, "..", "assets", "log.txt");
+//     fs.appendFile(chemin, `Requête : ${url} - Heure requête : ${timeReq} - Méthode : ${method}\n`, (() => {}));
+//     next();
+// })
+
+server.use("/", (req, res, next) => {
     console.log('requête: '+req.method);
     const {url, method} = req;
     const timeReq = timeConverter(Date.now());
@@ -46,8 +54,17 @@ server.all("/", (req, res, next) => {
     next();
 })
 
-server.all("/question", (req, res, next) => {
-    console.log('requête: '+req.method);
+// server.all("/question", (req, res, next) => {
+//     console.log('requête: '+req.method);
+//     const {url, method} = req;
+//     const timeReq = timeConverter(Date.now());
+//     const chemin = join(__dirname, "..", "assets", "log.txt");
+//     fs.appendFile(chemin, `Requête : ${url} - Heure requête : ${timeReq} - Méthode : ${method}\n`, (() => {}));
+//     next();
+// })
+
+server.use("/question", (req, res, next) => {
+    console.log('requête: '+ req.method);
     const {url, method} = req;
     const timeReq = timeConverter(Date.now());
     const chemin = join(__dirname, "..", "assets", "log.txt");

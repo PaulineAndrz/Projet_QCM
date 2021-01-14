@@ -43,7 +43,15 @@ server.all("/", function (req, res, next) {
     fs_1.default.appendFile(chemin, "Requ\u00EAte : " + url + " - Heure requ\u00EAte : " + timeReq + " - M\u00E9thode : " + method + "\n", (function () { }));
     next();
 });
-server.all("/question", function (req, res, next) {
+// server.all("/question", (req, res, next) => {
+//     console.log('requête: '+req.method);
+//     const {url, method} = req;
+//     const timeReq = timeConverter(Date.now());
+//     const chemin = join(__dirname, "..", "assets", "log.txt");
+//     fs.appendFile(chemin, `Requête : ${url} - Heure requête : ${timeReq} - Méthode : ${method}\n`, (() => {}));
+//     next();
+// })
+server.use("/question", function (req, res, next) {
     console.log('requête: ' + req.method);
     var url = req.url, method = req.method;
     var timeReq = timeConverter(Date.now());
