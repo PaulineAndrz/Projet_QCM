@@ -9,7 +9,7 @@ var questionSchema = new mongoose_1.default.Schema({
     question: String,
     answers: [{
             libelle: String,
-            resp: Boolean,
+            validation: Boolean,
         }]
 }, { versionKey: false });
 var questionModel = mongoose_1.default.model('questions', questionSchema);
@@ -29,7 +29,7 @@ var QuestionRepository = /** @class */ (function () {
         return questionModel.findByIdAndDelete(id).exec();
     };
     QuestionRepository.prototype.updateById = function (id, updateQuestion) {
-        return questionModel.findByIdAndUpdate(id, updateQuestion).exec();
+        return questionModel.findByIdAndUpdate(id, { "question": updateQuestion }).exec();
     };
     return QuestionRepository;
 }());

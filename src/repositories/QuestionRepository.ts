@@ -4,7 +4,7 @@ const questionSchema = new mongoose.Schema({
     question: String,
     answers: [{
         libelle: String,
-        resp: Boolean,
+        validation: Boolean,
     }]
 },
     {versionKey: false}
@@ -31,9 +31,8 @@ class QuestionRepository {
     }
 
     public updateById(id: String, updateQuestion: String) {
-        return questionModel.findByIdAndUpdate(id, updateQuestion).exec();
+         return questionModel.findByIdAndUpdate(id, {"question" : updateQuestion}).exec();
     }
-
 }
 
 export const questionRepository = Object.freeze(new QuestionRepository())

@@ -28,9 +28,11 @@ class QuestionController {
     public updateById(req: any, res: any) {
         const id = req.params.id;
         const question = req.body.question;
+        // const answersLibelle = req.body.answers.libelle;
+        // const answersValidation = req.body.answers.validation;
         questionService.updateById(id, question).then((data: any) => {
             res.json(data);
-        })
+        });
     }
 }
 

@@ -28,6 +28,8 @@ var QuestionController = /** @class */ (function () {
     QuestionController.prototype.updateById = function (req, res) {
         var id = req.params.id;
         var question = req.body.question;
+        // const answersLibelle = req.body.answers.libelle;
+        // const answersValidation = req.body.answers.validation;
         QuestionService_1.questionService.updateById(id, question).then(function (data) {
             res.json(data);
         });
