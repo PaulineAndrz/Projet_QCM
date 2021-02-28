@@ -1,3 +1,109 @@
 {
+    "question": "En quelle année est sortie le film Shining de Stanley Kubrick ?",
+    "answers": [
+        {
+            "libelle": "1981",
+            "validation": false
+        },
+        {
+            "libelle": "1980",
+            "validation": true
+        },
+        {
+            "libelle": "1979",
+            "validation": false
+        },
+        {
+            "libelle": "1978",
+            "validation": false
+        }
+    ]
+}
 
+{
+    "question": "Quelles franchises de NBA à le plus de titre ?",
+    "answers": [
+        {
+            "libelle": "Celtics de Boston & Bulls de Chicago",
+            "validation": false
+        },
+        {
+            "libelle": "Bulls de Chicago & Heat de Miami",
+            "validation": false
+        },
+        {
+            "libelle": "Nuggets de Denver & Clippers de Los Angeles",
+            "validation": false
+        },
+        {
+            "libelle": "Celtics de Boston & Lakers de Los Angeles",
+            "validation": true
+        }
+    ]
+}
+
+{
+    "question": "D'après une estimation, combien de spectateurs ont suivis le Live Aid de 13 juillet 1985 ?",
+    "answers": [
+        {
+            "libelle": "800 millions",
+            "validation": false
+        },
+        {
+            "libelle": "1 milliard",
+            "validation": false
+        },
+        {
+            "libelle": "1,5 milliards",
+            "validation": false
+        },
+        {
+            "libelle": "2 milliards",
+            "validation": true
+        }
+    ]
+}
+
+{
+    "question": "Quel est le jeu le plus vendus de tous les temps ?",
+    "answers": [
+        {
+            "libelle": "Grand Theft Auto V",
+            "validation": false
+        },
+        {
+            "libelle": "Tetris",
+            "validation": false
+        },
+        {
+            "libelle": "Minecraft",
+            "validation": true
+        },
+        {
+            "libelle": "Wii Sports",
+            "validation": false
+        }
+    ]
+}
+
+{
+    "question": "Combien il y a t-il de tome dans l'oeuvre de Frank Herbert, Dune ?",
+    "answers": [
+        {
+            "libelle": "6",
+            "validation": true
+        },
+        {
+            "libelle": "5",
+            "validation": false
+        },
+        {
+            "libelle": "7",
+            "validation": false
+        },
+        {
+            "libelle": "4",
+            "validation": false
+        }
+    ]
 }
