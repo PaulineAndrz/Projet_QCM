@@ -23,3 +23,14 @@
     * Reprendre le schéma de la question complète dans l'onglet "Body", selectionner "Raw", puis l'option "JSON" dans Postman.
     * Modifier notre question, puis l'envoyer
     * Faire un GET de la question pour révifier la modification à bien était prise en compte
+
+## Git
+### Envoyer des modifications sur la branche principale "main" :
+1. S'assurer que nous sommes bien sur notre branche personnelle (pauline, thomas, david, joel, etc.) : git branch
+2. On ajoute nos modifications : git add .
+3. On commit ces modifications avec un commentaire en anglais : git commit -m "[Notre commentaire]"
+4. On envoie nos modifications sur notre branche : git push origin [Notre branche]
+5. On retourne sur la branche principale : git checkout main
+6. **Attention, ces dernieres commande sont a faire par une seule personne de l'équipe afin d'éviter de possible conflits :**
+    * On fusionne notre branche avec la branche principale : git merge [Notre branche]
+    * On envoie toutes les modifications sur la branche principale : git push origin main
